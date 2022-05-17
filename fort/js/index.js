@@ -60,7 +60,7 @@ const menuItem = document.querySelectorAll('.menu-item-link');
 
 const sections = document.querySelectorAll('section');
 
-const langBtn = document.querySelector('.lang-block');
+const langBtns = document.querySelectorAll('.lang-block-link');
 const langRu = document.querySelector('.lang-ru');
 const langAm = document.querySelector('.lang-am');
 const ratesBlock = document.querySelector('.todelete');
@@ -214,16 +214,33 @@ window.addEventListener('load', () => {
         })
     })
 
-    langBtn.addEventListener('click', () => {
-        if ( lang == 'am' ) {
-            lang = 'ru';
-            getTranslate(lang);
-        } else {
-            lang = 'am';
-            getTranslate(lang); 
-        }
-        
+    langBtns.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            let setLang = e.target.dataset.lang;
+            if ( item.classList.contains('lang-active') ) {
+                lang = setLang;
+                getTranslate(lang);
+            } else {
+                langBtns.forEach((btn) => {
+                    btn.classList.remove('lang-active');
+                    item.classList.add('lang-active');
+                    lang = setLang;
+                    getTranslate(lang);
+                })
+            }
+        })
     })
+
+    // langBtn.addEventListener('click', () => {
+    //     if ( lang == 'am' ) {
+    //         lang = 'ru';
+    //         getTranslate(lang);
+    //     } else {
+    //         lang = 'am';
+    //         getTranslate(lang); 
+    //     }
+        
+    // })
 
     // bannerClose.addEventListener('click', () => {
     //     bannerBlock.style.display = 'none';
