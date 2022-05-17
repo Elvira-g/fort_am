@@ -69,7 +69,7 @@ const benefitsFirstChild = document.querySelector('.hero-benefits-first-child');
 const formNames = document.querySelectorAll('.form-name-placeholder');
 const formTels = document.querySelectorAll('.form-tel-placeholder');
 const errors = document.querySelectorAll('.error');
-let lang = 'ru';
+let lang = 'am';
 
 // function getLocalStorage() {
 //     if(localStorage.getItem('lang')) {
