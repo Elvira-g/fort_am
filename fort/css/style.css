@@ -2458,6 +2458,15 @@ ymaps {
         width: 100%;
     }
 
+    .lang-block {
+        margin-left: 10px;
+    }
+
+    .call-block {
+        margin-right: 15px;
+    }
+
+
     .container {
         padding: 0 21px 0 22px;
     }
@@ -2926,7 +2935,15 @@ ymaps {
         margin-bottom: 10px;
         width: 100%;
     }
-
-
     
+}
+
+@media (max-width: 375px) {
+    
+    .header .container {
+        padding: 0 15px 0 17px;
+    }
+    .logo-block {
+        width: 90px;
+    }
 }
