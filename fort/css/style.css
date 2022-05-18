@@ -598,7 +598,7 @@ input[type="checkbox"]:checked + label:after {
     width: 100%;
     padding: 117px 0;
     box-sizing: border-box;
-    background-image: url(../assets/img/hero.jpg);
+    background-image: url(../assets/img/hero.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
