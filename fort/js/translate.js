@@ -108,7 +108,7 @@ const translate = {
         'rates-flat': 'Բնակարանի անվտանգություն',
         'rates-flat-number': '30000',
         'rates-house': 'տան անվտանգություն',
-        'rates-house-number': '50000',
+        'rates-house-number': '40000',
         'rates-busines': 'Բիզնեսի անվտանգություն',
         'rates-busines-number': '50000',
         'rates-time': 'Ժամանման ժամանակը 10 րոպե',
