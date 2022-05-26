@@ -71,6 +71,9 @@ const formTels = document.querySelectorAll('.form-tel-placeholder');
 const errors = document.querySelectorAll('.error');
 let lang = 'am';
 
+const mapBlock = document.querySelector('.map-link');
+const contactsBlock = document.querySelector('.contacts');
+
 // function getLocalStorage() {
 //     if(localStorage.getItem('lang')) {
 //         lang = localStorage.getItem('lang');
@@ -92,6 +95,8 @@ function getTranslate(lang) {
         document.querySelector("[data-lang='ru']").classList.add('active');
         ratesBlock.style.display = 'block';
         benefitsFirstChild.style.width = '163px';
+        mapBlock.style.display = 'block';
+        contactsBlock.style.height = '460px';
         equipmentItem.forEach((item)=> {
            item.style.padding = '38px 30px 30px 30px' 
         })
@@ -109,6 +114,8 @@ function getTranslate(lang) {
         document.querySelector("[data-lang='ru']").classList.remove('active');
         ratesBlock.style.display = 'none';
         benefitsFirstChild.style.width = '205px';
+        mapBlock.style.display = 'none';
+        contactsBlock.style.height = '260px';
         equipmentItem.forEach((item)=> {
             item.style.padding = '38px 20px 30px 20px' 
          })
@@ -162,7 +169,7 @@ window.addEventListener('load', () => {
             if (lang == 'ru') {
                 showError(errorField, 'Заполните поле');   
             } else {
-                showError(errorField, 'Լրացրեք դաշտը'); 
+                showError(errorField, 'Լրացնել դաշտը'); 
             }
             
         } else {
@@ -186,7 +193,7 @@ window.addEventListener('load', () => {
             if (lang == 'ru') {
                 showError(errorField, 'Заполните поле');   
             } else {
-                showError(errorField, 'Լրացրեք դաշտը'); 
+                showError(errorField, 'Լրացնել դաշտը'); 
             }
         } else {
             NGRequest.setData(new FormData(e.currentTarget), {'success': (d) => {
@@ -230,17 +237,6 @@ window.addEventListener('load', () => {
             }
         })
     })
-
-    // langBtn.addEventListener('click', () => {
-    //     if ( lang == 'am' ) {
-    //         lang = 'ru';
-    //         getTranslate(lang);
-    //     } else {
-    //         lang = 'am';
-    //         getTranslate(lang); 
-    //     }
-        
-    // })
 
     // bannerClose.addEventListener('click', () => {
     //     bannerBlock.style.display = 'none';
@@ -336,7 +332,7 @@ function showForm() {
             if ( lang == 'ru' ) {
                 showError(errorField, 'Заполните поле');  
             } else {
-                showError(errorField, 'Լրացրեք դաշտը'); 
+                showError(errorField, 'Լրացնել դաշտը'); 
             }
         } else {
             NGRequest.setData(new FormData(e.currentTarget), {'success': (d) => {
@@ -344,7 +340,7 @@ function showForm() {
                     if ( lang == 'ru' ) {
                         showMassage('Спасибо за заказ!');  
                     } else {
-                        showMassage('Շնորհակալություն ձեր պատվերի համար:'); 
+                        showMassage('Շնորհակալություն պատվերի համար'); 
                     }
                 }, 'error': (e) => {alert('Что-то пошло не так!')}}, '/send_mail.php');
             NGRequest.send();
@@ -362,8 +358,8 @@ function showMassage(message) {
     } else {
         contactModalText.innerHTML = `
         <h2 class="modal-contact-title">${message}</h2>
-        <p class="section-text" data='modal-reply-2'>Մենք շուտով կկապվենք ձեզ հետ</p>
-        <button class="btn-orange modal-contact-back-btn" data='modal-back'>Վերադարձեք գլխավոր էջ</button>
+        <p class="section-text" data='modal-reply-2'>Մենք կկապնվենք ձեր հետ առաջին հնարավորության դեպքում</p>
+        <button class="btn-orange modal-contact-back-btn" data='modal-back'>Վերադառնալ գլխավորին</button>
         `;
     }
     

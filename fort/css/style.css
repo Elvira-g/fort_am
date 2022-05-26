@@ -1473,7 +1473,7 @@ ymaps {
 }
 
 .contacts {
-    height: 460px;
+    height: 260px;
 }
 
 .contacts .container {
@@ -1481,6 +1481,10 @@ ymaps {
     top: -145px;
     left: 0;
     right: 0;
+}
+
+.map-link {
+    display: none;
 }
 
 .contacts-form-block {

@@ -78,7 +78,6 @@ const translate = {
         'policy-link': 'Политика конфиденциальности',
         'phone': '+7 (495) 877-47-39',
         'email': 'sales2@uvo-ohrana.ru',
-
     },
     'am': {
         'modal-reply': 'Մենք ձեզ կզանգահարենք:',
@@ -159,7 +158,6 @@ const translate = {
         'policy-link': 'Գաղտնիության քաղաքականություն',
         'phone': '09 408 86 51',
         'email': '',
-
     }
 }
 
