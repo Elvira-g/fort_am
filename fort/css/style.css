@@ -1483,9 +1483,6 @@ ymaps {
     right: 0;
 }
 
-.map-link {
-    display: none;
-}
 
 .contacts-form-block {
     background: var(--colorGrey);

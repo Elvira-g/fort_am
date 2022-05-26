@@ -71,8 +71,6 @@ const formTels = document.querySelectorAll('.form-tel-placeholder');
 const errors = document.querySelectorAll('.error');
 let lang = 'am';
 
-const mapBlock = document.querySelector('.map-link');
-const contactsBlock = document.querySelector('.contacts');
 
 // function getLocalStorage() {
 //     if(localStorage.getItem('lang')) {
@@ -95,8 +93,6 @@ function getTranslate(lang) {
         document.querySelector("[data-lang='ru']").classList.add('active');
         ratesBlock.style.display = 'block';
         benefitsFirstChild.style.width = '163px';
-        mapBlock.style.display = 'block';
-        contactsBlock.style.height = '460px';
         equipmentItem.forEach((item)=> {
            item.style.padding = '38px 30px 30px 30px' 
         })
@@ -114,8 +110,6 @@ function getTranslate(lang) {
         document.querySelector("[data-lang='ru']").classList.remove('active');
         ratesBlock.style.display = 'none';
         benefitsFirstChild.style.width = '205px';
-        mapBlock.style.display = 'none';
-        contactsBlock.style.height = '260px';
         equipmentItem.forEach((item)=> {
             item.style.padding = '38px 20px 30px 20px' 
          })
