@@ -91,8 +91,8 @@ function getTranslate(lang) {
     if(lang === 'ru') {
         document.querySelector("[data-lang='am']").classList.remove('active');
         document.querySelector("[data-lang='ru']").classList.add('active');
-        ratesBlock.style.display = 'block';
-        benefitsFirstChild.style.width = '163px';
+        // ratesBlock.style.display = 'block';
+        benefitsFirstChild.style.width = '223px';
         equipmentItem.forEach((item)=> {
            item.style.padding = '38px 30px 30px 30px' 
         })
@@ -108,7 +108,7 @@ function getTranslate(lang) {
     if(lang === 'am') {
         document.querySelector("[data-lang='am']").classList.add('active');
         document.querySelector("[data-lang='ru']").classList.remove('active');
-        ratesBlock.style.display = 'none';
+        // ratesBlock.style.display = 'none';
         benefitsFirstChild.style.width = '205px';
         equipmentItem.forEach((item)=> {
             item.style.padding = '38px 20px 30px 20px' 
